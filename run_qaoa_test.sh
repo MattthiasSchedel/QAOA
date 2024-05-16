@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --gres=gpu:1
 #SBATCH --partition=gpuA100 
-#SBATCH --time=02:15:00
+#SBATCH --time=23:59:00
 #SBATCH --job-name=pytorch_mnist
 #SBATCH --output=qaoa_test.out
  
