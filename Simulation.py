@@ -9,7 +9,7 @@ def main():
     problem_generator = ProblemGenerator()
     optimizer = QuantumOptimizer()
     backend = StatevectorSimulatorBackend()
-    problem = generator.generate_knapsack(5, (5, 20), (5, 63))
+    problem = problem_generator.generate_knapsack(5, (5, 20), (5, 63))
 
     solutions = {}
     for i in range(1,30):
