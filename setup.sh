@@ -19,6 +19,7 @@ source activate qaoa
 conda install -c conda-forge qiskit qiskit-optimization qiskit-aer scipy matplotlib numpy networkx -y
 
 # Install qiskit-aer with GPU support
+pip install qiskit-aer
 pip install qiskit-aer-gpu
 
 ldd $(python -c "import qiskit_aer; print(qiskit_aer.__file__)")
