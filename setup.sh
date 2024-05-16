@@ -6,7 +6,8 @@
 #SBATCH --output=qaoa_setup.out
 
 # Set up environment
-uenv verbose cuda-12.3.2 cudnn-12.x-9.0.0 
+# uenv verbose cuda-12.3.2 cudnn-12.x-9.0.0 
+uenv verbose cudnn-11.6-8.4.1 cuda-11.6.2 
 uenv miniconda3-py310
 
 # Create conda environment
@@ -20,6 +21,7 @@ conda install -c conda-forge qiskit qiskit-optimization qiskit-aer scipy matplot
 
 # Install qiskit-aer with GPU support
 pip install qiskit-aer
-pip install qiskit-aer-gpu
+# pip install qiskit-aer-gpu
+pip install qiskit-aer-gpu-cu11
 
 ldd $(python -c "import qiskit_aer; print(qiskit_aer.__file__)")
