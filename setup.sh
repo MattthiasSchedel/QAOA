@@ -10,13 +10,15 @@ uenv verbose cuda-12.3.2 cudnn-12.x-9.0.0
 uenv miniconda3-py310
 
 # Create conda environment
-conda create -n qaoa -y
+conda create -n qaoa python=3.10 -y
 
 # Activate conda environment
 source activate qaoa
 
 # Install packages
-conda install -c conda-forge qiskit qiskit-optimization scipy matplotlib numpy networkx -y
+conda install -c conda-forge qiskit qiskit-optimization qiskit-aer scipy matplotlib numpy networkx -y
 
 # Install qiskit-aer with GPU support
 pip install qiskit-aer-gpu
+
+ldd $(python -c "import qiskit_aer; print(qiskit_aer.__file__)")
