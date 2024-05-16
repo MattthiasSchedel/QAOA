@@ -8,4 +8,4 @@
 # Set up environment
 uenv verbose cuda-12.3.2 cudnn-12.x-9.0.0 
 uenv miniconda3-py310
-conda env create -f qiskit_env.yml
+conda create -n qaoa -c   qiskit-aer-gpu  qiskit  qiskit-optimization  scipy  matplotlib  numpy  networkx -y
