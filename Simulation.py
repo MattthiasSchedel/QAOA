@@ -6,6 +6,7 @@ import json
 
 def main():
     file_name = "solutions.json"
+    problem_file = "problem.txt"
     problem_generator = ProblemGenerator()
     optimizer = QuantumOptimizer()
     backend = StatevectorSimulatorBackend()
@@ -21,11 +22,13 @@ def main():
             optimizer.set_backend(backend)
             solution = optimizer.optimize()
             print(f"p = {i}, iteration = {j}, solution = {solution}")
-            solutions[f"p={i}, iteration={j}"] = solution
+            solutions[f"p={i}, iteration={j}"] = {'solution': solution, 'optimizer': optimizer.to_json()} 
 
     with open(file_name, "w") as f:
         json.dump(solutions, f)
-
+    
+    with open(problem_file, "w") as f:
+        f.write(problem.to_json())
 
 if __name__ == "__main__":
     main()
