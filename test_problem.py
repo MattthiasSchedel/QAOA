@@ -26,8 +26,8 @@ def test_problem(data: dict, layers: int, rep: int):
         solutions.append(solution)
         parameters.append(optimizer.x0)
     print("Done!")
-    results['solutions'] = solutions
-    results['parameters'] = parameters
+    results['solutions'] = [solutions]
+    results['parameters'] = [parameters]
     
     # save the results to a csv file
     filename = f"results_{layers}_{rep}.csv"

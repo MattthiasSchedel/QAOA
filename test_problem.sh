@@ -3,7 +3,7 @@
 #SBATCH --partition=cpu64
 #SBATCH --time=23:59:00
 #SBATCH --job-name=pytorch_mnist
-#SBATCH --output=qaoa_test.out
+# #SBATCH --output=qaoa_test.out
  
 # Activate environment
 # uenv verbose cuda-12.3.2 cudnn-12.x-9.0.0

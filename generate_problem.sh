@@ -3,7 +3,7 @@
 #SBATCH --partition=cpu64
 #SBATCH --time=23:59:00
 #SBATCH --job-name=pytorch_mnist
-#SBATCH --output=generate_maxcut_$1_$2.out
+## SBATCH --output=generate_maxcut.out
  
 # Activate environment
 uenv miniconda3-py310
