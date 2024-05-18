@@ -91,7 +91,7 @@ class NoiseModelBackend(Backend):
         service = QiskitRuntimeService(
             channel='ibm_quantum',
             instance='ibm-q/open/main',
-            token='83c14caea83e768600f9d7646593924e9387e8b6eb6cd97700027cb3e602fc8d300b46781b179594b103ddcabaecfbe8a8b70185eed0e58723a0e8a2b5c544f5'
+            token=''
         )
 
         backend = service.backend("ibm_brisbane")
