@@ -1,4 +1,4 @@
-from QAOA_Tester import ProblemGenerator, QuantumOptimizer, NoisyEstimatorBackend
+from QAOA_Tester import ProblemGenerator, QuantumOptimizer, StatevectorEstimatorBackend
 
 import argparse
 import array
