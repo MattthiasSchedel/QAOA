@@ -11,6 +11,8 @@ class MaxcutProblem(Problem):
         self.graph = description['graph']
         self.problem = Maxcut(self.graph)
         self.position = description['position']
+        self.name = 'maxcut'
+        self.n = len(self.graph.nodes())
         super().to_quadratic_program()
         super().to_qubo()
         super().solve()

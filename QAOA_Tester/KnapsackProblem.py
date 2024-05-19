@@ -16,6 +16,7 @@ class KnapsackProblem(Problem):
         self.weights = [item['weight'] for item in description['items']]
         self.colors = [item['color'] for item in description['items']]
         self.problem = Knapsack(values = self.values, weights = self.weights, max_weight = self.constraint)
+        self.name = 'knapsack'
 
         super().to_quadratic_program()
         super().to_qubo()

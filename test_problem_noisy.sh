@@ -11,5 +11,5 @@
 uenv miniconda3-py310
 conda activate qaoa
 # Run the Python script that uses the GPU
-python -u test_problem.py $1 $2 $3 # file name, number of layers, number of repetitions
+python -u test_problem_noisy.py $1 $2 $3 # file name, number of layers, number of repetitions
 
