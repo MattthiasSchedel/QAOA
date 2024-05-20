@@ -23,14 +23,14 @@ def test_problem(data: dict, layers: int, rep: int):
     solutions = []
     parameters = []
     times = []
-    for i in range(rep):
-        print(f"Rep {i}")
-        start = time.time()
-        solution = optimizer.optimize()
-        end = time.time()
-        times.append(end - start)
-        solutions.append(solution)
-        parameters.append(optimizer.x0)
+    # for i in range(rep):
+    print(f"Rep {rep}")
+    start = time.time()
+    solution = optimizer.optimize()
+    end = time.time()
+    times.append(end - start)
+    solutions.append(solution)
+    parameters.append(optimizer.x0)
     print("Done!")
     results['solutions'] = [solutions]
     results['parameters'] = [parameters]
