@@ -36,11 +36,12 @@ class Backend:
     def cost_function(self, params, ansatz, hamiltonian, estimator):
         raise NotImplementedError
 
+# TODO: Implement for all backends
     def run(self, circuit):
         backend = StatevectorSimulator()
         circuit = transpile(circuit, backend)
         return backend.run(circuit).result()
-
+#TODO: No more to_json. Do to_dict instead
     def to_json(self):
         return {
             'simulator': str(self.simulator),
