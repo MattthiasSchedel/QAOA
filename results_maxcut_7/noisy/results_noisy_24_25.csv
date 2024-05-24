@@ -1,0 +1,11 @@
+,problem,layers,optimizer,solutions,parameters,time
+0,"{'type': 'maxcut', 'graph': {'directed': False, 'multigraph': False, 'graph': {}, 'nodes': [{'id': 0}, {'id': 1}, {'id': 2}, {'id': 3}, {'id': 4}, {'id': 5}, {'id': 6}], 'links': [{'weight': 5, 'source': 0, 'target': 1}, {'weight': 7, 'source': 0, 'target': 2}, {'weight': 2, 'source': 0, 'target': 3}, {'weight': 3, 'source': 0, 'target': 4}, {'weight': 5, 'source': 0, 'target': 5}, {'weight': 2, 'source': 0, 'target': 6}, {'weight': 8, 'source': 1, 'target': 2}, {'weight': 6, 'source': 1, 'target': 3}, {'weight': 9, 'source': 1, 'target': 4}, {'weight': 4, 'source': 1, 'target': 5}, {'weight': 1, 'source': 1, 'target': 6}, {'weight': 1, 'source': 2, 'target': 3}, {'weight': 4, 'source': 2, 'target': 4}, {'weight': 8, 'source': 2, 'target': 5}, {'weight': 9, 'source': 2, 'target': 6}, {'weight': 7, 'source': 3, 'target': 4}, {'weight': 3, 'source': 3, 'target': 5}, {'weight': 9, 'source': 3, 'target': 6}, {'weight': 8, 'source': 4, 'target': 5}, {'weight': 8, 'source': 4, 'target': 6}, {'weight': 9, 'source': 5, 'target': 6}]}, 'position': {0: [-0.3256208872959432, -1.0], 1: [0.5673561078537072, -0.48310920832699883], 2: [-0.7474534023302581, -0.1155005818164978], 3: [0.8234533555893597, 0.5571209180257686], 4: [-0.03599560114020317, 0.3574868838281689], 5: [-0.08826502462403853, -0.19787775086906342], 6: [-0.193474548052625, 0.8818797391586218]}, 'solution': ([0, 0, 1, 1, 1, 0, 0], 80.0)}",24,"{'optimizer': 'COBYLA', 'maxiter': 100, 'shots': 1024, 'parameter_strategy': 'RANDOM', 'x0': None, 'backend': <QAOA_Tester.Backend.NoisyEstimatorBackend object at 0x7fd5f8338b20>}","[([0, 1, 0, 1, 0, 1, 1], -72.0)]","[array([6.13528837, 5.27582533, 4.92636416, 0.38862422, 1.84210108,
+       5.87649242, 2.21656588, 3.03952159, 1.58612984, 1.47370454,
+       1.56071535, 0.38109545, 3.71167891, 1.97348051, 0.43998854,
+       5.18995043, 0.67329121, 4.698185  , 2.33778464, 1.6280612 ,
+       5.64497302, 6.25057551, 5.9205374 , 3.68868708, 5.02332074,
+       0.34322616, 4.8834968 , 5.60359936, 3.26021345, 5.34844836,
+       0.82572164, 1.5644819 , 0.37208945, 1.69276828, 4.15520708,
+       4.65532289, 1.36261536, 5.65261264, 2.7980289 , 3.19354703,
+       1.63385887, 2.80121287, 0.62932064, 2.13761608, 6.18372756,
+       4.2183068 , 1.65326267, 0.55089504])]",[748.8814632892609]

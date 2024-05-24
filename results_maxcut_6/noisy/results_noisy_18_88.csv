@@ -1,0 +1,10 @@
+,problem,layers,optimizer,solutions,parameters,time
+0,"{'type': 'maxcut', 'graph': {'directed': False, 'multigraph': False, 'graph': {}, 'nodes': [{'id': 0}, {'id': 1}, {'id': 2}, {'id': 3}, {'id': 4}, {'id': 5}], 'links': [{'weight': 7, 'source': 0, 'target': 1}, {'weight': 6, 'source': 0, 'target': 2}, {'weight': 7, 'source': 0, 'target': 3}, {'weight': 4, 'source': 0, 'target': 4}, {'weight': 4, 'source': 0, 'target': 5}, {'weight': 2, 'source': 1, 'target': 2}, {'weight': 3, 'source': 1, 'target': 3}, {'weight': 8, 'source': 1, 'target': 4}, {'weight': 6, 'source': 1, 'target': 5}, {'weight': 1, 'source': 2, 'target': 3}, {'weight': 3, 'source': 2, 'target': 4}, {'weight': 1, 'source': 2, 'target': 5}, {'weight': 5, 'source': 3, 'target': 4}, {'weight': 3, 'source': 3, 'target': 5}, {'weight': 9, 'source': 4, 'target': 5}]}, 'position': {0: [-0.3530969605659351, 0.23653079210894307], 1: [-0.014831158988742517, -0.5502250464361691], 2: [-1.0, -0.1882379096458032], 3: [0.26073034696767516, 0.7833475704555309], 4: [0.3319078567906819, 0.06165714010134473], 5: [0.7752899157963203, -0.34307254658384684]}, 'solution': ([0, 1, 1, 1, 0, 1], 49.0)}",18,"{'optimizer': 'COBYLA', 'maxiter': 100, 'shots': 1024, 'parameter_strategy': 'RANDOM', 'x0': None, 'backend': <QAOA_Tester.Backend.NoisyEstimatorBackend object at 0x7fac1d070ee0>}","[([0, 1, 1, 0, 0, 1], -44.0)]","[array([1.21915607e-01, 5.58226059e-01, 3.45464526e+00, 1.42317133e-03,
+       1.02523177e-01, 2.70787605e+00, 3.43898951e-01, 8.22418697e-01,
+       1.55909088e+00, 4.15263627e+00, 2.88014229e+00, 1.27521735e+00,
+       5.33896140e+00, 1.03309194e+00, 1.18463268e+00, 4.11872236e+00,
+       7.31788434e-01, 6.92914600e+00, 1.99303309e+00, 5.53679543e+00,
+       6.11571296e+00, 4.43520878e+00, 2.68809858e+00, 1.78301364e+00,
+       1.89077634e+00, 5.31718603e+00, 3.53243424e-01, 5.46245586e+00,
+       2.76672697e+00, 4.20397949e+00, 3.94920820e+00, 5.50288643e+00,
+       1.00848653e+00, 5.80999056e+00, 1.29867328e+00, 5.39463878e+00])]",[665.724582195282]

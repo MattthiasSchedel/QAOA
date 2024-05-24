@@ -1,0 +1,15 @@
+,problem,layers,optimizer,solutions,parameters,time
+0,"{'type': 'maxcut', 'graph': {'directed': False, 'multigraph': False, 'graph': {}, 'nodes': [{'id': 0}, {'id': 1}, {'id': 2}, {'id': 3}, {'id': 4}, {'id': 5}, {'id': 6}, {'id': 7}], 'links': [{'weight': 6, 'source': 0, 'target': 1}, {'weight': 5, 'source': 0, 'target': 2}, {'weight': 2, 'source': 0, 'target': 3}, {'weight': 3, 'source': 0, 'target': 4}, {'weight': 7, 'source': 0, 'target': 5}, {'weight': 4, 'source': 0, 'target': 6}, {'weight': 3, 'source': 0, 'target': 7}, {'weight': 9, 'source': 1, 'target': 2}, {'weight': 8, 'source': 1, 'target': 3}, {'weight': 7, 'source': 1, 'target': 4}, {'weight': 8, 'source': 1, 'target': 5}, {'weight': 4, 'source': 1, 'target': 6}, {'weight': 8, 'source': 1, 'target': 7}, {'weight': 7, 'source': 2, 'target': 3}, {'weight': 6, 'source': 2, 'target': 4}, {'weight': 2, 'source': 2, 'target': 5}, {'weight': 9, 'source': 2, 'target': 6}, {'weight': 8, 'source': 2, 'target': 7}, {'weight': 6, 'source': 3, 'target': 4}, {'weight': 5, 'source': 3, 'target': 5}, {'weight': 9, 'source': 3, 'target': 6}, {'weight': 8, 'source': 3, 'target': 7}, {'weight': 3, 'source': 4, 'target': 5}, {'weight': 8, 'source': 4, 'target': 6}, {'weight': 6, 'source': 4, 'target': 7}, {'weight': 7, 'source': 5, 'target': 6}, {'weight': 8, 'source': 5, 'target': 7}, {'weight': 9, 'source': 6, 'target': 7}]}, 'position': {0: [-0.04610672611046123, -1.0], 1: [-0.6384012426388563, -0.10839612757944966], 2: [-0.18531958902345144, -0.3886761220211158], 3: [0.10592742348204566, 0.8326678380662548], 4: [0.5997982371508559, -0.3606809150547959], 5: [0.6432115347281615, 0.24869292743126437], 6: [0.05127287846856093, 0.25470387194191546], 7: [-0.5303825160568563, 0.5216885272159255]}, 'solution': ([0, 0, 1, 1, 1, 1, 0, 0], 112.0)}",27,"{'optimizer': 'COBYLA', 'maxiter': 100, 'shots': 1024, 'parameter_strategy': 'RANDOM', 'x0': None, 'backend': <QAOA_Tester.Backend.NoisyEstimatorBackend object at 0x7f6684ff0d00>}","[([0, 0, 0, 0, 1, 0, 1, 0], -73.0)]","[array([3.57842264e+00, 3.14173999e+00, 8.08451998e-01, 4.06696697e+00,
+       1.94360538e+00, 2.92883818e+00, 2.92150087e+00, 6.11056516e+00,
+       3.37527180e+00, 1.26169030e+00, 3.28119141e+00, 4.21580622e+00,
+       5.59805500e+00, 1.99563392e+00, 5.03112989e+00, 3.71064724e+00,
+       4.76946108e+00, 7.03342508e-01, 2.44518971e+00, 5.57862496e+00,
+       3.80445530e+00, 2.19870156e+00, 5.81021629e+00, 3.17812600e+00,
+       5.07341982e+00, 1.42874787e+00, 3.06417279e+00, 1.85086143e+00,
+       1.49322655e+00, 1.52840471e+00, 2.43218045e+00, 5.46660995e+00,
+       5.29227882e+00, 4.14525467e+00, 5.63699663e+00, 5.93342343e+00,
+       3.11662919e+00, 1.08995643e+00, 3.84633563e+00, 3.00232253e+00,
+       1.97582343e+00, 5.08119092e+00, 1.72903583e+00, 3.84030957e+00,
+       5.69001890e+00, 4.76319879e+00, 1.83072495e+00, 3.48894330e-03,
+       3.96905909e+00, 5.22293409e-01, 2.59233486e+00, 1.71230677e+00,
+       3.03941838e+00, 1.99138498e+00])]",[841.8371615409851]

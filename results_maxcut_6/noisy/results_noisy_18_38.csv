@@ -1,0 +1,10 @@
+,problem,layers,optimizer,solutions,parameters,time
+0,"{'type': 'maxcut', 'graph': {'directed': False, 'multigraph': False, 'graph': {}, 'nodes': [{'id': 0}, {'id': 1}, {'id': 2}, {'id': 3}, {'id': 4}, {'id': 5}], 'links': [{'weight': 7, 'source': 0, 'target': 1}, {'weight': 6, 'source': 0, 'target': 2}, {'weight': 7, 'source': 0, 'target': 3}, {'weight': 4, 'source': 0, 'target': 4}, {'weight': 4, 'source': 0, 'target': 5}, {'weight': 2, 'source': 1, 'target': 2}, {'weight': 3, 'source': 1, 'target': 3}, {'weight': 8, 'source': 1, 'target': 4}, {'weight': 6, 'source': 1, 'target': 5}, {'weight': 1, 'source': 2, 'target': 3}, {'weight': 3, 'source': 2, 'target': 4}, {'weight': 1, 'source': 2, 'target': 5}, {'weight': 5, 'source': 3, 'target': 4}, {'weight': 3, 'source': 3, 'target': 5}, {'weight': 9, 'source': 4, 'target': 5}]}, 'position': {0: [-0.3530969605659351, 0.23653079210894307], 1: [-0.014831158988742517, -0.5502250464361691], 2: [-1.0, -0.1882379096458032], 3: [0.26073034696767516, 0.7833475704555309], 4: [0.3319078567906819, 0.06165714010134473], 5: [0.7752899157963203, -0.34307254658384684]}, 'solution': ([0, 1, 1, 1, 0, 1], 49.0)}",18,"{'optimizer': 'COBYLA', 'maxiter': 100, 'shots': 1024, 'parameter_strategy': 'RANDOM', 'x0': None, 'backend': <QAOA_Tester.Backend.NoisyEstimatorBackend object at 0x7f7e738186d0>}","[([1, 0, 0, 1, 0, 1], -42.0)]","[array([3.71676319e+00, 3.13468995e+00, 2.10725323e-02, 1.70224730e+00,
+       3.11967117e+00, 1.15414211e+00, 1.80282769e+00, 3.47687152e+00,
+       2.10225717e+00, 5.11171380e-01, 4.98298803e+00, 3.43578854e+00,
+       3.96508598e+00, 4.67136358e-01, 5.89273709e+00, 5.15423648e+00,
+       4.99540068e+00, 2.86875546e+00, 5.50377470e+00, 6.30732984e-01,
+       6.19277760e+00, 3.27252294e+00, 3.56928871e+00, 1.37996162e+00,
+       3.67761339e-03, 3.18848829e+00, 5.71969934e+00, 7.02842391e-01,
+       2.28203175e+00, 3.50919180e+00, 2.89911678e+00, 6.39709857e-01,
+       3.79858426e+00, 5.44613337e+00, 4.27938241e+00, 1.77012909e+00])]",[631.5232362747192]

@@ -1,0 +1,6 @@
+,problem,layers,optimizer,solutions,parameters,time
+0,"{'type': 'maxcut', 'graph': {'directed': False, 'multigraph': False, 'graph': {}, 'nodes': [{'id': 0}, {'id': 1}, {'id': 2}], 'links': [{'weight': 6, 'source': 0, 'target': 1}, {'weight': 7, 'source': 0, 'target': 2}, {'weight': 1, 'source': 1, 'target': 2}]}, 'position': {0: [0.07851080556038943, 0.24969078637319295], 1: [-1.0, 0.10034683312306583], 2: [0.9214891944396112, -0.3500376194962584]}, 'solution': ([0, 1, 1], 13.0)}",12,"{'optimizer': 'COBYLA', 'maxiter': 100, 'shots': 1024, 'parameter_strategy': 'RANDOM', 'x0': None, 'backend': <QAOA_Tester.Backend.NoisyEstimatorBackend object at 0x7f4a49d259f0>}","[([0, 1, 0], -7.0)]","[array([1.40200979, 3.1607033 , 4.90597545, 3.16462487, 3.78188538,
+       2.27519325, 2.2313354 , 3.15985725, 2.18635741, 4.95826993,
+       1.67096896, 5.27852063, 5.39298859, 3.07616837, 5.97874775,
+       3.14935647, 1.02450629, 5.44558839, 5.0649705 , 2.13323856,
+       2.29788056, 0.68435947, 5.6776694 , 5.51831045])]",[595.933507680893]
