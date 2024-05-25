@@ -61,7 +61,7 @@ class QuantumOptimizer:
             self.x0 = np.ones(num_parameters)
         else:
             raise ValueError("Invalid parameter strategy.")
-        return self.x0
+        # return self.x0
 
         options = {}
         if self.tol is not None:
@@ -114,6 +114,7 @@ class QuantumOptimizer:
             'parameter_strategy': self.parameter_strategy, 
             'x0': self.x0.tolist() if self.x0 is not None else None,
             'backend': self.backend if self.backend is not None else None
+
         }
         
     
