@@ -70,9 +70,9 @@ if __name__ == "__main__":
     # print(data)
     data = eval(f"{data}")
 
-    if args.max_iter is -2:
+    if args.max_iter == -2:
         args.max_iter = None
-    if args.tol is -2:
+    if args.tol == -2:
         args.tol = None
-        
+
     test_problem(data, args.layers, args.rep, args.max_iter, args.tol)
