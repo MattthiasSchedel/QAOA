@@ -4,7 +4,7 @@
 number_of_nodes=9
 number_of_edges=36
 
-sbatch generate_problem.sh $number_of_nodes $number_of_edges --output=generate_maxcut.out
+# sbatch generate_problem.sh $number_of_nodes $number_of_edges --output=generate_maxcut.out
 # sh generate_problem.sh $number_of_nodes $number_of_edges
 filename=maxcut_problem_$number_of_nodes\_$number_of_edges.txt
 echo $filename

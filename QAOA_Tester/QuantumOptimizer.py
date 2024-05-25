@@ -12,6 +12,7 @@ class QuantumOptimizer:
     def __init__(self, optimizer: str = 'COBYLA', maxiter: int = 100, shots: int = 1024, parameter_strategy: ParameterStrategy = ParameterStrategy.RANDOM):
         self.optimizer = optimizer
         self.maxiter = maxiter
+        self.tol = None 
         self.backend = None
         self.problem = None
         self.shots = shots
@@ -20,6 +21,7 @@ class QuantumOptimizer:
         self.ansatz_isa = None
         self.hamiltonian_isa = None
         self.cost_function = None
+        self.num_iterations_needed = None
 
     def set_backend(self, backend):
         self.backend = backend
@@ -32,6 +34,9 @@ class QuantumOptimizer:
 
     def set_maxiter(self, maxiter):
         self.maxiter = maxiter
+
+    def set_tol(self, tol):
+        self.tol = tol
 
     def set_shots(self, shots):
         self.shots = shots
@@ -58,11 +63,18 @@ class QuantumOptimizer:
             raise ValueError("Invalid parameter strategy.")
         return self.x0
 
+        options = {}
+        if self.tol is not None:
+            options['tol'] = self.tol
+        if self.maxiter is not None:
+            options['maxiter'] = self.maxiter
+        return options
+
 
     def optimize(self):
-        self.initialize()
+        options = self.initialize()
         
-        output = minimize(self.backend.cost_function, self.x0, args=(self.ansatz_isa, self.hamiltonian_isa, self.backend.simulator), method=self.optimizer, options={'maxiter': self.maxiter})
+        output = minimize(self.backend.cost_function, self.x0, args=(self.ansatz_isa, self.hamiltonian_isa, self.backend.simulator), method=self.optimizer, options=options)
         self.x0 = output.x
         circuit = self.problem.qaoa_ansatz.assign_parameters(output.x)
         circuit.measure_all()

@@ -10,6 +10,7 @@
 # uenv verbose cudnn-11.6-8.4.1 cuda-11.6.2 
 uenv miniconda3-py310
 conda activate qaoa
-# Run the Python script that uses the GPU
-python -u test_problem_optimal.py $1 $2 $3 # file name, number of layers, number of repetitions
+# Run the Python script that uses the CPU
+# If $4 and $5 are not provided, the function is called without them
+python -u test_problem_optimal.py $1 $2 $3 --max_iter $4 --tol $5 # file name, number of layers, number of repetitions, max number of iterations, tolerance
 

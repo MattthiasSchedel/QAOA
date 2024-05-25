@@ -6,13 +6,14 @@ import pandas as pd
 import time
 import os
 
-def test_problem(data: dict, layers: int, rep: int):
+def test_problem(data: dict, layers: int, rep: int, max_iter: int, tol: float):
     problem = ProblemGenerator.from_dict(data)
     problem.to_qaoa_ansatz(layers)
     backend = StatevectorEstimatorBackend()
-    optimizer = QuantumOptimizer()
+    optimizer = QuantumOptimizer(maxiter=max_iter)
     optimizer.set_problem(problem)
     optimizer.set_backend(backend)
+    optimizer.set_tol(tol)
     
     # create a dataframe to store the result and a general description of the problem
     results = pd.DataFrame()
@@ -37,7 +38,12 @@ def test_problem(data: dict, layers: int, rep: int):
     results['time'] = [times]
     
     # create the folder if it does not exist
-    foldername = f"results_{problem.name}_{problem.n}/optimal"
+    if max_iter is None:
+        max_iter = "None"
+    if tol is None:
+        tol = "None"
+    
+    foldername = f"results_{problem.name}_{problem.n}_{max_iter}i_{tol}/optimal"
     if not os.path.exists(foldername):
         os.makedirs(foldername)
 
@@ -53,6 +59,9 @@ if __name__ == "__main__":
     parser.add_argument('filename', type=str, help='Filename of the problem')
     parser.add_argument('layers', type=int, help='Number of QAOA layers')
     parser.add_argument('rep', type=int, help='Number of repetitions')
+    # make maxiter and tol optional 
+    parser.add_argument('--max_iter', type=int, default=None, help='Number of iterations for optimizer')
+    parser.add_argument('--tol', type=float, default=None, help='Tolerance for optimizer')
     args = parser.parse_args()
     # turn the data into a dictionary
     data = None
@@ -60,4 +69,10 @@ if __name__ == "__main__":
         data = eval(f.read())
     # print(data)
     data = eval(f"{data}")
-    test_problem(data, args.layers, args.rep)
+
+    if args.max_iter is -2:
+        args.max_iter = None
+    if args.tol is -2:
+        args.tol = None
+        
+    test_problem(data, args.layers, args.rep, args.max_iter, args.tol)
