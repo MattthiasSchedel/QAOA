@@ -88,7 +88,8 @@ class QuantumOptimizer:
         #     value = self.problem.quadratic_program.objective.evaluate(solution)
         # else:
         #     value = 0
-
+        # reverse the solution
+        solution = solution[::-1]
         value = self.problem.qubo.objective.evaluate(solution)
         return solution, value
 
