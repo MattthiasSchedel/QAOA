@@ -1,0 +1,16 @@
+
+Traceback (most recent call last):
+  File "/opt/miniconda310/bin/conda", line 12, in <module>
+    from conda.cli import main
+  File "/opt/miniconda310/lib/python3.10/site-packages/conda/__init__.py", line 4, in <module>
+  File "/opt/miniconda310/lib/python3.10/json/__init__.py", line 106, in <module>
+  File "/opt/miniconda310/lib/python3.10/json/decoder.py", line 5, in <module>
+ImportError: cannot import name 'scanner' from partially initialized module 'json' (most likely due to a circular import) (/opt/miniconda310/lib/python3.10/json/__init__.py)
+Traceback (most recent call last):
+  File "/nfs/student/matsche/QAOA/test_problem_optimal.py", line 1, in <module>
+    from QAOA_Tester import ProblemGenerator, QuantumOptimizer, StatevectorEstimatorBackend
+  File "/nfs/student/matsche/QAOA/QAOA_Tester/__init__.py", line 1, in <module>
+    from .Backend import Backend, StatevectorEstimatorBackend, StatevectorSimulatorBackend, NoiseModelBackend, NoisyEstimatorBackend
+  File "/nfs/student/matsche/QAOA/QAOA_Tester/Backend.py", line 1, in <module>
+    from qiskit_aer import StatevectorSimulator
+ModuleNotFoundError: No module named 'qiskit_aer'
