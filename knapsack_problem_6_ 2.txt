@@ -1,0 +1,1 @@
+{'type': 'knapsack', 'items': [{'weight': 12, 'profit': 40, 'color': 'grey'}, {'weight': 19, 'profit': 8, 'color': 'yellow'}, {'weight': 15, 'profit': 6, 'color': 'green'}, {'weight': 20, 'profit': 10, 'color': 'orange'}, {'weight': 20, 'profit': 60, 'color': 'red'}, {'weight': 11, 'profit': 38, 'color': 'blue'}], 'constraint': 49}
