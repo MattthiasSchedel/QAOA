@@ -26,8 +26,8 @@ class KnapsackProblem(Problem):
         # Convert to numpy arrays for element-wise operations
         weights = np.array(self.weights)
         values = np.array(self.values)
-       
-        seperator = 0.5
+    
+        separator = 0.5
 
         # Normalize profit values to a suitable range for bar widths, ensuring visibility
         value_widths = values / weights
@@ -42,12 +42,12 @@ class KnapsackProblem(Problem):
         for i, (weight, value_width, color) in enumerate(zip(weights, value_widths, self.colors)):
             ax.bar(x_pos + 0.5* value_width, weight, width=value_width, color=custom_colors[color]['light'] , edgecolor=custom_colors[color]['dark'])
             label_pos.append(x_pos + 0.5*value_width)
-            x_pos += value_width + seperator # Move x position for the next bar
+            x_pos += value_width + separator # Move x position for the next bar
                 
             # Add labels for the values on top of the bars
             ax.text(label_pos[-1], weight / 2, str(values[i]),
                         ha='center', va='center', color='black')
-                
+                    
 
         # Add a constraint line to visualize the weight limit
         ax.axhline(self.constraint, color='r', linestyle='--')
@@ -58,16 +58,17 @@ class KnapsackProblem(Problem):
 
         # Set x-ticks to be visible for each bar
         ax.set_xticks(label_pos)
-        ax.set_xticklabels([f'Item {i+1}' for i in range(self.n)])
+        ax.set_xticklabels([f'Item {i+1}' for i in range(self.n)], rotation=45, ha='right')
 
         # add a legend for the constraint line
         ax.legend(['Weight Constraint $W$'], loc='upper right')
 
-        plt.show()
+        # plt.show()
+        return plt
 
 
     def visualize_solution(self, solution=None):
-         # Default to selecting all items if no solution is provided
+        # Default to selecting all items if no solution is provided
         if solution is None:
             solution = self.solution
         else:
@@ -98,9 +99,13 @@ class KnapsackProblem(Problem):
 
         # Plot each selected item as a segment of the stacked bar, adjusting width by profit
         bottom = 0
-        for weight, profit_width, color in zip(selected_weights, profit_widths, self.colors):
+        for i, (weight, profit_width, color) in enumerate(zip(selected_weights, profit_widths, self.colors)):
             if weight > 0:  # Only plot selected items
-                ax.bar(x_pos, weight, bottom=bottom, color=custom_colors[color]['light'] , width=base_width + profit_width, align='edge', edgecolor=custom_colors[color]['dark'], linewidth=2)
+                bar = ax.bar(x_pos, weight, bottom=bottom, color=custom_colors[color]['light'], 
+                             width=base_width + profit_width, align='edge', edgecolor=custom_colors[color]['dark'], linewidth=2)
+                # Add text in the center of each chosen item
+                ax.text(x_pos + (base_width + profit_width) / 2, bottom + weight / 2, f'Item {i+1}', 
+                        ha='center', va='center', color='black')
                 bottom += weight
 
         # Add a constraint line to visualize the limit
@@ -108,10 +113,12 @@ class KnapsackProblem(Problem):
 
         ax.set_xlabel('Value')
         ax.set_ylabel('Weight')
-        # ax.set_title('Knapsack Problem Solution with Profit-Adjusted Width')
+        ax.set_title('Knapsack Problem Solution with Profit-Adjusted Width')
 
         # Return the figure and axes instead of showing it
-        plt.show()
+        # plt.show()
+        return plt
+
 
     def to_dict(self):
         return {

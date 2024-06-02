@@ -17,9 +17,9 @@ class MaxcutProblem(Problem):
         super().to_qubo()
         super().solve()
 
-    def visualize_problem(self):
+    def visualize_problem(self, scaling_factor=1.0):
         # Setup plot with adjusted layout
-        plt.figure(figsize=(16, 12))  # You can adjust the size to fit your needs
+        plt.figure(figsize=(16* scaling_factor, 12* scaling_factor))  # You can adjust the size to fit your needs
         colors = custom_colors['blue']['light']
         border_colors = custom_colors['blue']['dark']
 
@@ -40,14 +40,14 @@ class MaxcutProblem(Problem):
         return plt
         plt.show()
 
-    def visualize_solution(self, solution = None):
+    def visualize_solution(self, solution = None, scaling_factor=1.0):
         if solution is None:
             solution = self.solution
 
         solution = solution[0]
 
         # Setup plot with adjusted layout
-        plt.figure(figsize=(16, 12))  # You can adjust the size to fit your needs
+        plt.figure(figsize=(16 * scaling_factor, 12*scaling_factor))  # You can adjust the size to fit your needs
         print(solution)
         colors = [custom_colors['red']['light'] if solution[node] == 1 else custom_colors['green']['light'] for node in self.graph.nodes()]
         border_colors = [custom_colors['red']['dark'] if solution[node] == 1 else custom_colors['green']['dark'] for node in self.graph.nodes()]

@@ -91,5 +91,4 @@ class ProblemGenerator:
             }
             problem = MaxcutProblem(description)
 
-        problem.solution = data['solution']
         return problem

@@ -59,6 +59,20 @@ class Problem:
         self.solution = max(solutions, key=lambda x: x[1])
         return self.solution
 
+    def solve_qubo(self):
+        solutions = []
+        # Solve the problem by testing all possible solutions
+        length = self.qubo.get_num_binary_vars()
+        solution_strings = [f'{i:0{length}b}' for i in range(2**length)]
+        for solution_string in solution_strings:
+            solution = [int(bit) for bit in solution_string]
+            value = self.qubo.objective.evaluate(solution)
+            if self.qubo.is_feasible(solution):
+                solutions.append((solution, value))
+        # print(solution_strings)
+        self.solution_qubo = min(solutions, key=lambda x: x[1])
+        return self.solution_qubo
+
     def to_json(self):
         return{
             'description': self.description,
