@@ -34,7 +34,7 @@ do
         do
             problem_name="knapsack_problem_${number_of_elements}_$.txt"
             echo $problem_name
-            sbatch test_problem.sh "$problem_name" $number_of_layers $i
+            sbatch test_problem_noisy.sh "$problem_name" $number_of_layers $i
         done
     done
 done
