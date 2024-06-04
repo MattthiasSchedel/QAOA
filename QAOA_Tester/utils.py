@@ -22,6 +22,11 @@ custom_colors = {
     'grey': {
         'light': '#F5F5F5',
         'dark': '#666666'
+    },
+    'purple':
+    {
+        'light': '#E1D4E7',
+        'dark': '#9672A6'
     }
 }
 
