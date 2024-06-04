@@ -1,0 +1,33 @@
+
+Traceback (most recent call last):
+  File "/opt/miniconda310/lib/python3.10/site-packages/conda/common/serialize.py", line 12, in <module>
+  File "/opt/miniconda310/lib/python3.10/site-packages/ruamel/yaml/__init__.py", line 57, in <module>
+ModuleNotFoundError: No module named 'ruamel.yaml.main'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/miniconda310/lib/python3.10/site-packages/conda/common/serialize.py", line 15, in <module>
+ModuleNotFoundError: No module named 'ruamel_yaml'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/miniconda310/bin/conda", line 12, in <module>
+    from conda.cli import main
+  File "/opt/miniconda310/lib/python3.10/site-packages/conda/cli/__init__.py", line 3, in <module>
+  File "/opt/miniconda310/lib/python3.10/site-packages/conda/cli/main.py", line 34, in <module>
+  File "/opt/miniconda310/lib/python3.10/site-packages/conda/cli/conda_argparse.py", line 30, in <module>
+  File "/opt/miniconda310/lib/python3.10/site-packages/conda/base/context.py", line 49, in <module>
+  File "/opt/miniconda310/lib/python3.10/site-packages/conda/common/configuration.py", line 41, in <module>
+  File "/opt/miniconda310/lib/python3.10/site-packages/conda/common/serialize.py", line 17, in <module>
+    raise ImportError("No yaml library available. To proceed, conda install ruamel.yaml")
+ImportError: No yaml library available. To proceed, conda install ruamel.yaml
+Traceback (most recent call last):
+  File "/nfs/student/matsche/QAOA/test_problem_noisy.py", line 1, in <module>
+    from QAOA_Tester import ProblemGenerator, QuantumOptimizer, NoisyEstimatorBackend
+  File "/nfs/student/matsche/QAOA/QAOA_Tester/__init__.py", line 1, in <module>
+    from .Backend import Backend, StatevectorEstimatorBackend, StatevectorSimulatorBackend, NoiseModelBackend, NoisyEstimatorBackend
+  File "/nfs/student/matsche/QAOA/QAOA_Tester/Backend.py", line 1, in <module>
+    from qiskit_aer import StatevectorSimulator
+ModuleNotFoundError: No module named 'qiskit_aer'

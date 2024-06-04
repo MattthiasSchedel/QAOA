@@ -1,0 +1,9 @@
+,problem,layers,optimizer,solutions,parameters,time
+0,"{'type': 'knapsack', 'items': [{'weight': 11, 'profit': 50, 'color': 'red'}, {'weight': 3, 'profit': 24, 'color': 'blue'}, {'weight': 15, 'profit': 18, 'color': 'orange'}, {'weight': 10, 'profit': 56, 'color': 'grey'}, {'weight': 2, 'profit': 63, 'color': 'green'}], 'constraint': 21}",16,"{'optimizer': 'COBYLA', 'maxiter': 100, 'shots': 1024, 'parameter_strategy': 'RANDOM', 'x0': None, 'backend': <QAOA_Tester.Backend.NoisyEstimatorBackend object at 0x7f49fc6d4f40>}","[([0, 1, 1, 0, 0, 1, 1, 1, 1, 0], 30486.0)]","[array([ 3.90630831e-02,  3.51522952e+00,  5.30604406e+00,  3.77195234e+00,
+        1.53428783e-01,  5.63569171e+00,  2.73332155e+00,  2.17221027e+00,
+        5.92854957e+00,  5.69306478e+00,  2.45531838e+00,  3.45198132e+00,
+        4.15258906e+00,  4.47341639e+00,  1.27231332e+00,  3.56011035e+00,
+        4.24949121e+00,  3.46825976e+00,  1.55948395e+00,  3.61236544e+00,
+        5.85972895e+00,  8.14644081e-01,  5.71396074e+00,  2.38548086e+00,
+        2.14599325e+00,  6.29055323e+00,  1.80302002e-01,  4.67704107e+00,
+        1.29293951e-01,  8.91274860e-01, -2.80574975e-03,  5.10616135e+00])]",[3580.405581474304]

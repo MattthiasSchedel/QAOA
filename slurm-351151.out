@@ -1,0 +1,5 @@
+
+Traceback (most recent call last):
+  File "/nfs/student/matsche/QAOA/test_problem_noisy.py", line 59, in <module>
+    with open(args.filename, "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'knapsack_problem_5_$.txt'
