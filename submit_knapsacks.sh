@@ -11,7 +11,7 @@ max_elements=10
 # test the maxcut problem 
 min_number_of_layers=1
 max_number_of_layers=30
-number_of_repetitions=2
+number_of_repetitions=3
 
 # wait for the problem to be generated
 
