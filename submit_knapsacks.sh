@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # generate maxcut problem
-min_elements=3
-max_elements=10
+min_elements=5
+max_elements=5
 
 # sbatch generate_problem.sh $number_of_nodes $number_of_edges --output=generate_maxcut.out
 # sh generate_problem.sh $number_of_nodes $number_of_edges
@@ -11,7 +11,7 @@ max_elements=10
 # test the maxcut problem 
 min_number_of_layers=1
 max_number_of_layers=30
-number_of_repetitions=3
+number_of_repetitions=22
 
 # wait for the problem to be generated
 
@@ -33,8 +33,11 @@ do
 	echo $number_of_elements $number_of_layers
         problem_name="knapsack_problem_${number_of_elements}_.txt"
         echo $problem_name
-        sbatch test_problem_noisy.sh "$problem_name" $number_of_layers $number_of_repetitions
-	
+	for repetition in $(seq 11 $number_of_repetitions)
+	do
+		echo $repetition
+        	sbatch test_problem_noisy.sh "$problem_name" $number_of_layers $repetition
+	done
 	
     done
 done

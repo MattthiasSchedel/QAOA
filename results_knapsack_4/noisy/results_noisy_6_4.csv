@@ -1,0 +1,4 @@
+,problem,layers,optimizer,solutions,parameters,time
+0,"{'type': 'knapsack', 'items': [{'weight': 3, 'profit': 39, 'color': 'grey'}, {'weight': 19, 'profit': 26, 'color': 'yellow'}, {'weight': 10, 'profit': 50, 'color': 'orange'}, {'weight': 17, 'profit': 34, 'color': 'blue'}], 'constraint': 25}",6,"{'optimizer': 'COBYLA', 'maxiter': 100, 'shots': 1024, 'parameter_strategy': 'RANDOM', 'x0': None, 'backend': <QAOA_Tester.Backend.NoisyEstimatorBackend object at 0x7f5759948070>}","[([0, 0, 0, 1, 1, 1, 1, 0, 1], 12116.0)]","[array([2.26264759, 1.18444992, 1.03111497, 3.1887201 , 2.85769669,
+       4.16931551, 1.36689264, 5.6576779 , 1.00977353, 5.10043156,
+       1.26097004, 5.84230814])]",[717.97598695755]

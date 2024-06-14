@@ -1,0 +1,6 @@
+,problem,layers,optimizer,solutions,parameters,time
+0,"{'type': 'knapsack', 'items': [{'weight': 3, 'profit': 39, 'color': 'grey'}, {'weight': 19, 'profit': 26, 'color': 'yellow'}, {'weight': 10, 'profit': 50, 'color': 'orange'}, {'weight': 17, 'profit': 34, 'color': 'blue'}], 'constraint': 25}",12,"{'optimizer': 'COBYLA', 'maxiter': 100, 'shots': 1024, 'parameter_strategy': 'RANDOM', 'x0': None, 'backend': <QAOA_Tester.Backend.NoisyEstimatorBackend object at 0x7f17a787c8e0>}","[([1, 0, 1, 0, 1, 0, 1, 1, 1], 18061.0)]","[array([ 4.69129288,  4.67771655,  5.04880704,  5.79650507,  1.19121147,
+       -0.02220075,  6.24228006,  4.32014891,  4.57553371,  2.61715943,
+        0.56780836,  4.99109958,  4.59019598,  4.51218877,  3.916082  ,
+        2.02399369,  4.40214855,  5.21744449,  5.93137566,  5.32396458,
+        2.09467439,  1.59024164,  0.47489811,  5.88857513])]",[1027.7583816051483]
