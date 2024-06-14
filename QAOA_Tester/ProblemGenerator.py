@@ -12,8 +12,8 @@ class ProblemGenerator:
     def __init__(self):
         self.problem = None
 
-    def generate_knapsack(self, n: int, weight_range: tuple , profit_range: tuple, profit_as_weight=False):
-        description = self._generate_knapsack_items(n, weight_range, profit_range, profit_as_weight)
+    def generate_knapsack(self, num_items: int, weight_range: tuple , profit_range: tuple, profit_as_weight=False):
+        description = self._generate_knapsack_items(num_items, weight_range, profit_range, profit_as_weight)
         self.problem = KnapsackProblem(description= description)
         return self.problem
 

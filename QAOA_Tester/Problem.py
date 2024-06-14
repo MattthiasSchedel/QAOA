@@ -73,6 +73,7 @@ class Problem:
         self.solution_qubo = min(solutions, key=lambda x: x[1])
         return self.solution_qubo
 
+    # TODO: not used anymore. Remove?
     def to_json(self):
         return{
             'description': self.description,

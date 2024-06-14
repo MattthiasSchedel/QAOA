@@ -1,5 +1,0 @@
-
-127
-Rep 22
-slurmstepd: error: *** JOB 362311 ON gorina40 CANCELLED AT 2024-06-03T09:03:49 ***
-slurmstepd: error: Unable to unlink domain socket `/var/spool/slurmd/gorina40_362311.4294967291`: No such file or directory

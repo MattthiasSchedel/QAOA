@@ -1,4 +1,0 @@
-
-usage: test_problem_optimal.py [-h] [--max_iter MAX_ITER] [--tol TOL]
-                               filename layers rep
-test_problem_optimal.py: error: argument --max_iter: expected one argument
